@@ -1,0 +1,118 @@
+body {
+  background-image: url("/Users/lukemorrison/Desktop/React/wifi-config-app/public/background.png");
+  background-size: cover; /* Ensures the image scales to cover the window */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image in the window */
+  height: 100vh; /* Makes sure the body takes up the full viewport height */
+  margin: 0;
+}
+.container-top {
+  display: grid;
+  place-items: center; /* Center both horizontally and vertically */
+  position:relative;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  justify-content: center; /* Center grid horizontally */
+  align-items: center; /* Center grid items vertically */
+  transform: translateX(-10px);
+}
+.container-login_section {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  justify-content: center; /* Center grid horizontally */
+  align-items: center; /* Center grid items vertically */
+}
+.ucf-container {
+  position: fixed;
+  color: white; /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */ 
+  transform: translateX(20px) translateY(200px);
+}
+.vista_text {
+
+  position: fixed;
+  color: rgba(0, 191, 255, 0.819); /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */ 
+  transform: translateX(20px) translateY(200px);
+}
+
+.fail_connect_text {
+  position:fixed;
+  color: #000000; /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */ 
+  transform: translateX(50px) translateY(60px);
+}
+
+.success_connect_text {
+  position:fixed;
+  color: #000000; /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */ 
+  transform: translateX(50px) translateY(60px);
+}
+.login_button {
+  position: fixed;
+  cursor: pointer;
+  transform: translateX(500px);
+}
+.login_text {
+  position:absolute;
+  background-color: #28e8e227;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(430px) translateX(-25px);
+}
+.ssid_box{
+  justify-content: center;
+  color: white; /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */
+}
+
+.ssid_text{
+  color: white; /* Change text color */
+  font-size: 18px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */
+  transform: translateY(-30px) translateX(220px);
+
+
+}
+.password_text{
+  color: white; /* Change text color */
+  font-size: 18px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */
+  transform: translateY(-30px) translateX(370px);
+}
+button:hover {
+  background-color: rgb(200, 200, 219);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+button {
+  background-color: rgb(160, 160, 160);
+  transition: background-color 0.3s ease;
+}
+
+.animated-box {
+  animation: fadeIn 2s ease-in-out;
+}
