@@ -9,7 +9,7 @@ function App() {
   const [password, setPassword] = useState(''); // State for Password
   const [login_timer, set_login_timer] = useState(2); // Timer state (5 seconds)
   const [retry_count, set_retry_count] = useState(0); // Retry count
-  const [success_status, set_success_status] = useState(true);
+  const [success_status, set_success_status] = useState(false);
 
   const MAX_RETRIES = 3; // Max number of retries before showing "Failed to connect"
   const FETCH_TIMEOUT = 2000; // Timeout in milliseconds (2 seconds)
@@ -138,7 +138,7 @@ function App() {
   return (
     <div className='container-top'>
       
-        {!login_toggle && <div className='container-login_section'>
+        {!login_toggle && !success_status && <div className='container-login_section'>
         <div className='login_button'><button onClick={toggleLogin}>
       Login
       </button></div>
@@ -151,7 +151,7 @@ function App() {
             fail_connect && <h1 className='fail_connect_text' style={{ width: '500px' }}>Failed to connect!! Please re-try a valid SSID and Password for an available WiFi Network.</h1>
           }
         
-      { <form>
+      { <form className='ssid_box'>
           <input
             type="text"
             placeholder="Enter SSID"
@@ -176,6 +176,7 @@ function App() {
 
       {success_status && <div className='success_connect_text'>Connected successfully! Please connect to the WiFi network to use your VISTA device.</div>}
       
+      { !login_toggle && <h1 className='description_text'>Please enter an existing SSID and Password for an available WiFi network to begin VISTA Device Setup.</h1>}
     </div>
   );
 }

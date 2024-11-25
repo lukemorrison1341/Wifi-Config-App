@@ -1,5 +1,5 @@
 body {
-  background-image: url("/Users/lukemorrison/Desktop/React/wifi-config-app/public/background.png");
+  background-image: url("/public/background.png");
   background-size: cover; /* Ensures the image scales to cover the window */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image in the window */
@@ -34,12 +34,25 @@ body {
 .vista_text {
 
   position: fixed;
-  color: rgba(0, 191, 255, 0.819); /* Change text color */
+  background-color: #28e8e227;
+  color: rgb(255, 255, 255);
   font-size: 24px; /* Adjust font size */
   font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
   margin-bottom: 20px; /* Add some space below the text */ 
   transform: translateX(20px) translateY(200px);
 }
+
+.description_text {
+
+ 
+  
+  color: rgb(0, 0, 0);
+  font-size: 24px; /* Adjust font size */
+  font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
+  margin-bottom: 20px; /* Add some space below the text */ 
+  transform: translateX(-500px) translateY(350px);
+}
+
 
 .fail_connect_text {
   position:fixed;
@@ -61,7 +74,7 @@ body {
 .login_button {
   position: fixed;
   cursor: pointer;
-  transform: translateX(500px);
+  transform: translateX(400px) translateY(30px);
 }
 .login_text {
   position:absolute;
@@ -71,14 +84,16 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transform: translateY(430px) translateX(-25px);
+  transform: translateY(430px) translateX(15px);
 }
 .ssid_box{
+  position:absolute;
   justify-content: center;
   color: white; /* Change text color */
   font-size: 24px; /* Adjust font size */
   font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use a readable font */
   margin-bottom: 20px; /* Add some space below the text */
+  transform: translateX(390px) translateY(10px);
 }
 
 .ssid_text{
@@ -89,6 +104,11 @@ body {
   transform: translateY(-30px) translateX(220px);
 
 
+}
+
+.dialogue_text{
+  position:absolute;
+  
 }
 .password_text{
   color: white; /* Change text color */
